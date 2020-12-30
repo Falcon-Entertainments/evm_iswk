@@ -1,0 +1,9 @@
+        foreach ($mysqli->query("SELECT ccb,COUNT(grno)  FROM votesh WHERE ccb = '90f13d04454c6b703a131ccfe04ef88f4cd977fe' ") as $row44) {
+                $ccbc = $row44['COUNT(grno)'];
+                foreach ($mysqli->query("SELECT enc,name FROM candidates WHERE house = 'head council' AND post = 'ccb'") as $row0) {
+                    if ( '90f13d04454c6b703a131ccfe04ef88f4cd977fe' == $row0['enc']) {
+                        $ccb = $row0['name'];
+                        break;
+                    }
+                }
+        }
